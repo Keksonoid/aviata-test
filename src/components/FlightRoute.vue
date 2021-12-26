@@ -84,9 +84,7 @@ export default {
   data() {
     return {};
   },
-  mounted() {
-    // console.log("Flight info: ", this.route);
-  },
+  
   computed: {
     codes() {
       return {

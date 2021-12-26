@@ -61,7 +61,6 @@ export default {
       handler(values) {
         this.allSelected =
           this.selectedAirlines.length === Object.keys(this.airlines).length;
-        console.log("selected Airlines", this.selectedAirlines);
         this.$emit("input", values);
       },
     },

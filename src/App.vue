@@ -14,7 +14,6 @@ export default {
   },
   created() {
     this.$store.dispatch("getAirlines");
-    console.log("Environment: ", process.env.NODE_ENV);
   },
 };
 </script>

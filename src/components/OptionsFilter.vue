@@ -50,7 +50,6 @@ export default {
     options: {
       deep: true,
       handler(val) {
-        console.log("???????", val);
 
         this.$emit("input", val);
       },
@@ -58,7 +57,6 @@ export default {
   },
   methods: {
     clearFilter() {
-      console.log("qewruewqroij");
 
       this.options = [];
     },

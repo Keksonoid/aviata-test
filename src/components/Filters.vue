@@ -29,15 +29,13 @@ export default {
   watch: {
     options: {
       deep: true,
-      handler(val) {
-        console.log("Options updated: ", val);
+      handler() {
         this.applyFilters();
       },
     },
     airlines: {
       deep: true,
-      handler(val) {
-        console.log("Airlines updated: ", val);
+      handler() {
         this.applyFilters();
       },
     },
@@ -49,7 +47,6 @@ export default {
         airlines: [...this.airlines],
       };
       this.$emit("input", filters);
-      console.log("ApplyingFilters", filters);
     },
     clearAllFilters() {
       this.$refs.optionsFilter.clearFilter();

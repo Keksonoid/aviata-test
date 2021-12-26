@@ -43,7 +43,7 @@
     </div>
     <div class="flight-card-info">
       <strong class="text-center">{{ details.price }} ₸</strong>
-      <Button class="button-action mt-3" @click="test(details.price)">
+      <Button class="button-action mt-3">
         Выбрать
       </Button>
       <span class="text-xs gray-2 mt-2 text-center">
@@ -53,7 +53,7 @@
         <span class="text-luggage flex-grow text-center">
           {{ luggageString }}
         </span>
-        <Button class="button-secondary ml-2" @click="test(details.price)">
+        <Button class="button-secondary ml-2">
           + Добавить багаж
         </Button>
       </div>
@@ -111,7 +111,6 @@ export default {
     },
 
     luggageString() {
-      console.log("???", Object.keys(this.details.services));
       if (Object.keys(this.details.services).includes("0PC")) {
         return "Нет багажа";
       } else if (Object.keys(this.details.services).includes("1PC")) {
@@ -121,9 +120,7 @@ export default {
     },
   },
   methods: {
-    test(t) {
-      console.log("Button clicked", t);
-    },
+    
 
     formatDate(date) {
       return moment(date).format("DD MMM, dd").toLowerCase().replace(".", "");
@@ -163,7 +160,6 @@ export default {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   display: flex;
-  transition: 0.4s ease-in-out;
 
   @media (max-width: 600px) {
     flex-direction: column;

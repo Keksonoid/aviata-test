@@ -32,8 +32,6 @@ export default {
     FlightCard,
   },
   async created() {
-    console.log("created", this.searchResults);
-
     this.searchResults = await this.$store.dispatch("getFlights");
   },
   data() {
@@ -48,13 +46,7 @@ export default {
       handler(val) {
         this.searchFlights(val);
       },
-    },
-    // searchResults: {
-    //   deep: true,
-    //   handler(val) {
-    //     console.log("Results123: ", val);
-    //   },
-    // },
+    }
   },
   methods: {
     ...mapActions(["getFlights", "filterFlights"]),
