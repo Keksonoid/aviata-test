@@ -9,7 +9,6 @@
         label="Все"
         inputValue="all"
         v-model="allSelected"
-        class="mt-2 mb-2"
         @change="onAllCheckedChange"
       />
       <Checkbox
@@ -18,7 +17,6 @@
         :label="airlines[airline]"
         :inputValue="airline"
         v-model="selectedAirlines"
-        class="mt-2 mb-2"
       />
     </div>
   </div>

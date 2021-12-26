@@ -10,7 +10,6 @@
       :label="option.label"
       :inputValue="option.value"
       v-model="options"
-      class="mt-2 mb-2"
     />
   </div>
 </template>
